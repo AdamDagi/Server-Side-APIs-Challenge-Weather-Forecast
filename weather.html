@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diplomata+SC&family=Fascinate+Inline&family=Fredoka+One&family=Monoton&family=Righteous&family=Zen+Maru+Gothic:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/weather.css"/>
+  </head>
+
+  <body class="body_content">
+      <header>
+        <div class="header_background">
+          <div class="header_title">
+            <h1 class="title">Weather Forecast</h1>
+          </div>
+        </div>
+      </header>
+      <main class="main_conteiner">
+        <div class="search_container">
+          <div class="search_box">
+            <form class="example" action="action_page.php">
+              <label class="search_title" for="site-search">Search for a City:</label>
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="weather_container">
+          <div class="city_weather">
+          </div>
+          <div class="weak_forecast_conteqiner">
+            <h2 class="weak_forecast_title">5 Day Forecast</h2>
+            <div class="weak_forecast">
+              <div class="day_one">
+              </div>
+              <div class="day_two">
+              </div>
+              <div class="day_three">
+              </div>
+              <div class="day_four">
+              </div>
+              <div class="day_five">
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <script src="./js/weather.js"></script>
+  </body>
+
+</html>
