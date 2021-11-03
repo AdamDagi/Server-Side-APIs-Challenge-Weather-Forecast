@@ -51,7 +51,7 @@ animation-play-state: running;
     width: 350px;
     height: 1000px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .search_title {
