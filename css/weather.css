@@ -1,23 +1,11 @@
 body {
-background-image: url(./images/1614367565_42-p-svetlii-zvezdnii-fon-48.jpeg);
+background-image: url(./images/novenikiy.jpeg);
+background-size:cover; 
+background-position:center center; 
+background-repeat:no-repeat;
 display: flex;
 flex-direction: column;
 }
-/* background-repeat: repeat;
-animation: 300s para infinite linear;
-animation-play-state: running;
-}
-
-@keyframes para {
-100% {
-    background-position: 
-        -5000px 20%,
-        -800px 95%,
-        500px 50%,
-        1000px 100%,
-        400px 0;
-    }
-} */
 
 .body_content {
     margin: 0;
@@ -547,7 +535,7 @@ background: #0b7dda;
     justify-content: center;
 }
 
-.footer_image {
+/* .footer_image {
     background-image: url(./images/gororo.png);
     -webkit-filter: brightness(0.5);
     filter: brightness(0.7);
@@ -557,4 +545,4 @@ background: #0b7dda;
     background-size: 1500px 470px;
     background-position:center center; 
     background-repeat:no-repeat;
-}
+} */

@@ -30,14 +30,15 @@
 
 * Added Local Storage.
 
-GitHub Repo: https://github.com/AdamDagi/Weather_Forecast_Challenge
-URL Link: https://adamdagi.github.io/Weather_Forecast_Challenge/
+* GitHub Repo: https://github.com/AdamDagi/Weather_Forecast_Challenge
+* URL Link: https://adamdagi.github.io/Weather_Forecast_Challenge/
 
 Web Page without City info Screen.
-![Screen1](https://user-images.githubusercontent.com/90221273/140626020-8b47684e-adff-4291-9fca-bc41489c374e.jpeg)
+<img width="1560" alt="Screen Shot 2021-11-07 at 10 43 22 AM" src="https://user-images.githubusercontent.com/90221273/140652042-11b879e1-85c0-45b5-beae-e97d92d8e1b9.png">
 
 Web Page with City search and info Screen.
-![Screen2](https://user-images.githubusercontent.com/90221273/140626037-d14fdbc3-4542-4984-a684-14cc344a8942.jpeg)
+<img width="1565" alt="Screen Shot 2021-11-07 at 10 50 14 AM" src="https://user-images.githubusercontent.com/90221273/140652095-b7520c93-7340-41c7-8bba-24647179c815.png">
+
 
 Web Page smaler size Screen.
-![Screen3](https://user-images.githubusercontent.com/90221273/140626044-4a6a43f8-48f9-458c-afc9-0cb4e3f09a79.jpeg)
+<img width="1368" alt="Screen Shot 2021-11-07 at 10 42 37 AM" src="https://user-images.githubusercontent.com/90221273/140652110-1b643158-6df0-41f9-bb75-ef0de64ffe28.png">
