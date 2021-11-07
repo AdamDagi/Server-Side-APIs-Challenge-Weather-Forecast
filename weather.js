@@ -136,7 +136,7 @@ function updateData() {
         if (dayOneData.uvi <= 2) {
             infoUvIndexOne.innerHTML = index + " " + "🟢"
         } else if (dayOneData.uvi > 2 && dayOneData.uvi <= 5) {
-            infoUvIndexOnex.innerHTML = index + " " + "🟡"
+            infoUvIndexOne.innerHTML = index + " " + "🟡"
         } else if (dayOneData.uvi > 5 && dayOneData.uvi <= 7) {
             infoUvIndexOne.innerHTML = index + " " + "🟠"
         } else if (dayOneData.uvi > 7 && dayOneData.uvi <= 10) {
