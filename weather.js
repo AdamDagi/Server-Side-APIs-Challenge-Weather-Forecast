@@ -9,6 +9,7 @@ const infoHumidity = document.querySelector(".info_humidity");
 const infoUvIndex = document.querySelector(".info_uv_index");
 const weatherIcon = document.querySelector(".weather_icon");
 const historyName = [];
+let currentNameCity;
 let lat;
 let lon;
 // ----------------------------Card 1-----------------------------------
@@ -49,30 +50,49 @@ const weatherIconFive = document.querySelector(".day_five .weather_icon");
 
 async function start(city) {
     const url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=ade0fb3053d09af11fa65cf8982f5830`;
+    currentNameCity = city;
+    try {
+        let response = await fetch(url);
 
-    let response = await fetch(url);
+        if (response.ok) { 
+            const data = await response.json();
+            lat = data.city.coord.lat;
+            lon = data.city.coord.lon;
+            const city = data.city;
+            const cityNameApi = city.name;
 
-    if (response.ok) { 
-        const data = await response.json();
-        lat = data.city.coord.lat;
-        lon = data.city.coord.lon;
-        const city = data.city;
-        const cityNameApi = city.name;
-
-        cityName.innerHTML = cityNameApi;
-    } else {
-        alert("Ошибка HTTP: " + response.status);
+            cityName.innerHTML = cityNameApi;
+        } else {
+            console.log("Error HTTP: " + response.status);
+        };
+    } catch(e) {
+        console.log(e);
     };
 };
 
 
 async function getUV() {
-    const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=ade0fb3053d09af11fa65cf8982f5830`;
+    try {
+        const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=ade0fb3053d09af11fa65cf8982f5830`;
 
-    let response = await fetch(url);
+        let response = await fetch(url);
 
-    if (response.ok) { 
-        const data = await response.json();
+        if (response.ok) { 
+            const data = await response.json();
+            window.localStorage.setItem(currentNameCity, JSON.stringify(data));
+        } else {
+            alert("Error HTTP: " + response.status);
+        };
+    } catch(e) {
+        console.log(e);
+    };
+
+    updateData();
+};
+
+function updateData() {
+    const data = JSON.parse(window.localStorage.getItem(currentNameCity));
+    if (data) {
         const currentDayData = data.current;
         const humidity = (currentDayData.humidity) + " " + "💧";
         const temp = Math.floor(currentDayData.temp - 273) + " " + "&#8451";
@@ -223,7 +243,7 @@ async function getUV() {
             infoUvIndexFive.innerHTML = index + " " + "🔴"
         };
     } else {
-        alert("Ошибка HTTP: " + response.status);
+        alert("Error: City Not Found")
     };
 };
 
