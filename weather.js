@@ -49,7 +49,7 @@ const infoUvIndexFive = document.querySelector(".day_five .info_uv_index");
 const weatherIconFive = document.querySelector(".day_five .weather_icon");
 
 async function start(city) {
-    const url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=ade0fb3053d09af11fa65cf8982f5830`;
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=ade0fb3053d09af11fa65cf8982f5830`;
     currentNameCity = city;
     try {
         let response = await fetch(url);
